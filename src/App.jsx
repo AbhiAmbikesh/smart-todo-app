@@ -6,6 +6,7 @@ import Signup from './pages/Signup'
 import ForgotPassword from './pages/ForgotPassword'
 import Profile from './pages/Profile'
 import Dashboard from './pages/Dashboard'
+import AboutUs from './pages/AboutUs'
 
 function App() {
   const { user, loading } = useAuth();
@@ -22,6 +23,7 @@ function App() {
         <Route element={user ? <Layout /> : <Navigate to="/login" />}>
           <Route path="/" element={<Dashboard />} />
           <Route path="/profile" element={<Profile />} />
+          <Route path="/about-us" element={<AboutUs />} />
         </Route>
       </Routes>
     </Router>

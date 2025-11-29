@@ -1,6 +1,6 @@
 import { Link, useNavigate } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
-import { LogOut, User, CheckSquare, Sparkles } from 'lucide-react';
+import { LogOut, User, CheckSquare, Sparkles, Users } from 'lucide-react';
 import ThemeToggle from './ThemeToggle';
 
 const Navbar = () => {
@@ -33,6 +33,17 @@ const Navbar = () => {
                 </Link>
 
                 <div className="flex items-center gap-3">
+                    <Link
+                        to="/about-us"
+                        className="flex items-center gap-2 px-3 py-2 rounded-xl bg-white/50 dark:bg-gray-800/50 hover:bg-white dark:hover:bg-gray-800 transition-all duration-300 hover:shadow-lg hover:-translate-y-0.5 group"
+                        title="About Us"
+                    >
+                        <Users className="w-5 h-5 text-gray-600 dark:text-gray-300 group-hover:text-indigo-500 transition-colors" />
+                        <span className="hidden sm:block font-semibold text-sm text-gray-700 dark:text-gray-200 group-hover:text-indigo-500 transition-colors">
+                            About Us
+                        </span>
+                    </Link>
+
                     <Link
                         to="/profile"
                         className="flex items-center gap-3 px-3 py-2 rounded-xl bg-white/50 dark:bg-gray-800/50 hover:bg-white dark:hover:bg-gray-800 transition-all duration-300 hover:shadow-lg hover:-translate-y-0.5 group"
